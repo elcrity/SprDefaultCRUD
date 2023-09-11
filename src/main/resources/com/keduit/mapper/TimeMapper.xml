@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--mapper interface의 이름과 맞춰주면 xml의 설정과 인터페이스에 선언한 설정을 같이 사용 할 수 있게 된다
+com.keduit.mapper.TimeMapper에 있는 getTime은 아래의 쿼리문을 사용한 결과값을 리턴-->
+<mapper namespace="com.keduit.mapper.TimeMapper">
+    <select id="getTime" resultType="string">
+        select sysdate from dual
+    </select>
+</mapper>
