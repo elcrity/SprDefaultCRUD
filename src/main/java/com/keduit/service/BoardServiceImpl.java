@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("BoardServiceImpl")
 @RequiredArgsConstructor
 @Log4j
 @ToString
+
 public class BoardServiceImpl implements BoardService{
 
     //boardMapper를 생성자 주입으로 생성받음, @RequiredArgsConstructor는 final필드를 가진 클래스에 대해 생성자를 자동으로 생성
