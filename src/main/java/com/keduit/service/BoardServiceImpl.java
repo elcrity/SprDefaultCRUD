@@ -1,6 +1,7 @@
 package com.keduit.service;
 
 import com.keduit.domain.BoardVO;
+import com.keduit.domain.Criteria;
 import com.keduit.mapper.BoardMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -40,8 +41,19 @@ public class BoardServiceImpl implements BoardService{
         return mapper.delete(bno) == 1;
     }
 
+//    @Override
+//    public List<BoardVO> getList() {
+//        return mapper.getList();
+//    }
+
     @Override
-    public List<BoardVO> getList() {
-        return mapper.getList();
+    public List<BoardVO> getList(Criteria cri) {
+        return mapper.getListWithPaging(cri);
     }
+
+    @Override
+    public int getTotalCnt(Criteria cri){
+        return mapper.getTotalCnt(cri);
+    }
+
 }

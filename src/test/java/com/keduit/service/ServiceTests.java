@@ -1,6 +1,7 @@
 package com.keduit.service;
 
 import com.keduit.domain.BoardVO;
+import com.keduit.domain.Criteria;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -60,6 +61,6 @@ public class ServiceTests {
 
     @Test
     public void testGetList() {
-        service.getList().forEach(log::info);
+        service.getList(new Criteria(6, 10)).forEach(log::info);
     }
 }
